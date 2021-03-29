@@ -1,0 +1,117 @@
+@import "range";
+
+.news {
+   margin-top: 50px;
+
+   &-inner {
+      @include flex(null, space-between, null, null);
+   }
+
+   &-filter {
+      width: 280px;
+   }
+
+   &-filter__title {
+      @include textCharacter(uppercase, none, null);
+      @include fontSet($Roboto, 20px, 500, #000);
+   }
+
+   &-filter-block {
+      padding: 10px 0 20px 0;
+      border-bottom: 1px solid #ccc;
+
+      &:last-child {
+         border-bottom: none;
+      }
+
+      p:last-child {
+         @include fontSet($Roboto, 13px, 700, #000);
+         @include flex(null, space-between, null, null);
+      }
+   }
+
+   &-filter-block__title {
+      margin-bottom: 15px;
+      @include fontSet($Roboto, 20px, 500, #000);
+   }
+
+   &-filter-block-list {
+      list-style: none;
+
+      li {
+         @include fontSet($Roboto, 15px, 400, #000);
+      }
+
+      li:nth-child(n + 2) {
+         margin-top: 20px;
+      }
+
+      label {
+         width: 100%;
+         display: inline-block;
+         cursor: pointer;
+         @include flex(null, space-between, null, null);
+      }
+
+      input {
+         background: #ccc;
+      }
+   }
+
+   &-block {
+      max-width: 850px;
+   }
+
+   &-block__title {
+      @include fontSet($Roboto, 50px, 500, #000);
+   }
+
+   &-block__data {
+      p {
+         margin-top: 20px;
+         @include fontSet($Roboto, 16px, 400, #000);
+      }
+   }
+
+   &-block-house {
+      margin: 50px 0;
+      @include flex(null, space-between, null, null);
+   }
+
+   &-block-item {
+      max-width: 275px;
+
+      img {
+         @include img;
+      }
+   }
+
+   &-block-character {
+      padding: 20px;
+      background: #f1f8ff;
+
+      a {
+         @include textCharacter(null, none, null);
+         @include fontSet($Roboto, 21px, 500, #2da6a8);
+      }
+
+      p:nth-child(n + 2) {
+         margin-top: 5px;
+      }
+
+      p:nth-child(2) {
+         @include textCharacter(null, none, null);
+         @include fontSet($Roboto, 15px, 400, #545454);
+      }
+
+      p:nth-child(3) {
+         @include textCharacter(null, none, null);
+         @include fontSet($Roboto, 15px, 500, #A6AAA1);
+      }
+
+      p:nth-child(4) {
+         @include textCharacter(null, none, null);
+         @include fontSet($Roboto, 19px, 400, #545454);
+      }
+   }
+}
