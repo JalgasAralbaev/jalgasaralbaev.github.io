@@ -1,2 +1,0 @@
-# jalgasaralbaev.github.io
-myfirsthosting
